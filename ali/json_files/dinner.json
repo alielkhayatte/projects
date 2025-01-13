@@ -1,0 +1,42 @@
+[
+  {
+    "meal": "Mini fatour",
+    "price": "200 DH",
+    "img": "meals/dinner/mini_kaskrot.jpg"
+  },
+  {
+    "meal": "cake",
+    "price": "60 DH",
+    "img": "meals/dinner/cake_krime.jpg"
+  },
+  {
+    "meal": "Basboussa",
+    "price": "55 DH",
+    "img": "meals/dinner/basbosa.jpeg"
+  },
+  {
+    "meal": "Batbout",
+    "price": "5 DH",
+    "img": "meals/dinner/mlawi.jpeg"
+  },
+  {
+    "meal": "churros",
+    "price": "3 DH",
+    "img": "meals/dinner/5ringo.jpg"
+  },
+  {
+    "meal": "salade",
+    "price": "23 DH",
+    "img": "meals/dinner/chlada.jpeg"
+  },
+  {
+    "meal": "barbecue",
+    "price": "50 DH",
+    "img": "meals/dinner/Xwa.jpeg"
+  },
+  {
+    "meal": "jus Avoca",
+    "price": "8 DH",
+    "img": "meals/dinner/avoca.jpeg"
+  }
+]

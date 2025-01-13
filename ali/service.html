@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Ali Elkhayatte</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Spicy Rice', cursive;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #ff8c42;
+    }
+
+    .nav h3 {
+      font-size: 24px;
+      color: #ff8c42;
+    }
+
+    .nav-bar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover effect for navigation links */
+    .nav-bar a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #ff8c42;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .nav-bar a:hover {
+      color: #ff8c42;
+    }
+
+    .nav-bar a:hover::after {
+      width: 100%;
+    }
+
+    .icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Services Section */
+    .services {
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .services h1 {
+      font-size: 36px;
+      color: #ff8c42;
+      margin-bottom: 10px;
+    }
+
+    .services p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card i {
+      font-size: 40px;
+      color: #ff8c42;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Special Section */
+    .special-service {
+      margin-top: 60px;
+      padding: 40px;
+      background-color: #ff8c42;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .special-service h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .special-service p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .special-service .btn {
+      background-color: #fff;
+      color: #ff8c42;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .special-service .btn:hover {
+      background-color: #e67e22;
+      color: #fff;
+    }
+
+    /* Booking Form */
+    .booking-form {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .booking-form h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .booking-form button {
+      background-color: #ff8c42;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: #e67e22;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    footer .social-icons a {
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #ff8c42;
+      transform: rotate(360deg);
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-bar.active {
+        display: flex;
+      }
+
+      .icon {
+        display: block;
+      }
+
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="main">
+    <div class="nav">
+      <h3>Ali Elkhayatte</h3>
+      <div class="nav-bar">
+        <div class="home center"><a href="index.html">Home</a></div>
+        <div class="about center"><a href="about.html">About</a></div>
+        <div class="service center" style="color: orange"><a href="service.html">Service</a></div>
+        <div class="menu center"><a href="menu.html">Menu</a></div>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-x disabled"></i>
+      </div>
+    </div>
+    <div class="services">
+      <h1>Our Services</h1>
+      <p>We offer a variety of services to meet your needs.</p>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Quality Food</h3>
+          <p>We serve the best dishes made from fresh and organic ingredients.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-concierge-bell"></i>
+          <h3>Event Catering</h3>
+          <p>Perfect catering services for weddings, parties, and corporate events.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>Get your favorite meals delivered to your doorstep in no time.</p>
+        </div>
+      </div>
+      <!-- Special Service Section -->
+      <div class="special-service">
+        <h2>Special Offer!</h2>
+        <p>Book our catering service for your next event and get a 10% discount!</p>
+        <div class="btn" id="bookNowBtn">Book Now</div>
+        <!-- Booking Form -->
+        <div class="booking-form" id="bookingForm">
+          <h3>Book Your Event</h3>
+          <form id="eventForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="text" placeholder="Event Type" required />
+            <input type="date" placeholder="Event Date" required />
+            <textarea placeholder="Additional Details" rows="4"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>&copy; 2023 Ali Elkhayatte. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Toggle Navigation Bar on Mobile
+    const icon = document.querySelector('.icon');
+    const navBar = document.querySelector('.nav-bar');
+    const barsIcon = document.querySelector('.fa-bars');
+    const xIcon = document.querySelector('.fa-x');
+
+    icon.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+      barsIcon.classList.toggle('disabled');
+      xIcon.classList.toggle('disabled');
+    });
+
+    // Animate on Scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.service-card, .special-service');
+
+      elements.forEach((element) => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Toggle Booking Form on "Book Now" Click
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const bookingForm = document.getElementById('bookingForm');
+
+    bookNowBtn.addEventListener('click', () => {
+      if (bookingForm.style.display === 'none' || bookingForm.style.display === '') {
+        bookingForm.style.display = 'block';
+        bookNowBtn.textContent = 'Close Form';
+      } else {
+        bookingForm.style.display = 'none';
+        bookNowBtn.textContent = 'Book Now';
+      }
+    });
+
+    // Handle Form Submission
+    const eventForm = document.getElementById('eventForm');
+    eventForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your booking request has been submitted.');
+      bookingForm.style.display = 'none';
+      bookNowBtn.textContent = 'Book Now';
+      eventForm.reset();
+    });
+  </script>
+</body>
+</html>

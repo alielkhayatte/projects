@@ -1,0 +1,43 @@
+[
+    {
+      "meal": "tea",
+      "price": "25 DH",
+      "img": "meals/breakfast/tea.jpeg"
+    },
+    {
+      "meal": "caffe",
+      "price": "25 DH",
+      "img": "meals/breakfast/caffe.jpeg"
+    },
+    {
+      "meal": "Omelet",
+      "price": "30 DH",
+      "img": "meals/breakfast/omelete.jpeg"
+    },
+    {
+      "meal": "Barrir",
+      "price": "17 DH",
+      "img": "meals/breakfast/Barrir.jpeg"
+    },
+    {
+      "meal": "galette a base du semoul",
+      "price": "4 DH",
+      "img": "meals/breakfast/7rcha.jpg"
+    },
+    {
+      "meal": "Rayb",
+      "price": "4.5 DH",
+      "img": "meals/breakfast/rayb.jpeg"
+    },
+    {
+      "meal": "Msaman",
+      "price": "3 DH",
+      "img": "meals/breakfast/msaman.jpeg"
+    },
+    {
+      "meal": "Panecake",
+      "price": "24 DH",
+      "img": "meals/breakfast/pane_cake.jpeg"
+    }
+  ]
+  

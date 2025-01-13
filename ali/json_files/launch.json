@@ -1,0 +1,42 @@
+[
+  {
+    "meal": "Tajine",
+    "price": "70 DH",
+     "img": "meals/launch/tagin.jpg"
+  },
+  {
+    "meal": "Couscous",
+    "price": "100 DH",
+     "img": "meals/launch/coscos.jpg"
+  },
+  {
+    "meal": "poulet",
+    "price": "150 DH",
+     "img": "meals/launch/djajM7amar.jpeg"
+  },
+  {
+    "meal": "pestilla",
+    "price": "1100 DH",
+     "img": "meals/launch/bastilla.jpg"
+  },
+  {
+    "meal": "tajine de pruneaux et amandes",
+    "price": "200 DH",
+     "img": "meals/launch/l7amBar9o9.jpeg"
+  },
+  {
+    "meal": "haricot blancs a la tomate",
+    "price": "15 DH",
+     "img": "meals/launch/lobya.jpeg"
+  },
+  {
+    "meal": "Seffa",
+    "price": "130 DH",
+     "img": "meals/launch/seffa.jpeg"
+  },
+  {
+    "meal": "Tacos",
+    "price": "50 DH",
+     "img": "meals/launch/tacos.png"
+  }
+]
